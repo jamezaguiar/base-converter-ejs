@@ -12,8 +12,8 @@ routes.get('/', (request, response) => {
 
 routes.use('/bin', binaryRouter);
 
-routes.get('/oct', octalRouter);
+routes.use('/oct', octalRouter);
 
-routes.get('/hex', hexadecimalRouter);
+routes.use('/hex', hexadecimalRouter);
 
 export default routes;
