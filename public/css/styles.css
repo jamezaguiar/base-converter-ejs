@@ -126,3 +126,29 @@ header {
 .formBox form button:hover {
   background-color: #cacacc;
 }
+
+.resultContainer {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  width: 400px;
+  height: 350px;
+
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.resultBox h1 {
+  color: #607196;
+}
