@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Error</title>
+  </head>
+  <body>
+    <%- include ('./partials/header.ejs') %>
+    <div class="resultContainer">
+      <div class="resultBox">
+        <h1>Erro na requisição, verifique os dados de entrada.</h1>
+        <ul class="errorsList">
+          <p>
+            Erros que podem ter acontecido:
+          </p>
+          <li class="errorItem">
+            Você usou um número decimal onde devia usar binário ou vice-versa
+          </li>
+          <li class="errorItem">
+            Você usou uma letra onde devia usar um número
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
