@@ -4,10 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Binary Converter</title>
+    <title>Octal Converter</title>
   </head>
   <body>
     <%- include ('./partials/header.ejs') %>
-    <h1>oct</h1>
+    <div class="formContainer">
+      <div class="formBox">
+        <h1>Decimal ↔️ Octal</h1>
+        <form action="/convertDecToOct" method="GET">
+          <input
+            type="number"
+            name="decimalNumber"
+            id="decimalNumber"
+            placeholder="Digite um número decimal"
+          />
+          <button type="submit">Converter</button>
+        </form>
+        <form action="/convertOctToDec" method="GET">
+          <input
+            type="number"
+            name="octalNumber"
+            id="octalNumber"
+            placeholder="Digite um número octal"
+          />
+          <button type="submit">
+            Converter
+          </button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
