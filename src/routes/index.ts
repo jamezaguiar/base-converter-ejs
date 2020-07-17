@@ -1,6 +1,7 @@
 import { Router } from 'express';
 
 import ConvertDecToBinService from '../services/ConvertDecToBinService';
+import ConvertBinToDecService from '../services/ConvertBinToDecService';
 
 const routes = Router();
 
@@ -21,14 +22,31 @@ routes.get('/hex', (request, response) => {
 // Rotas para conversões de bases numéricas
 routes.get('/convertDecToBin', (request, response) => {
   const { decimalNumber } = request.query;
-  const data = {
-    decimalNumber,
-  } as { decimalNumber: string };
+  const data = { decimalNumber } as { decimalNumber: string };
   const conversor = new ConvertDecToBinService();
-  const result = conversor.execute(data);
+  const numberToConvert = data.decimalNumber;
+  const convertedNumber = conversor.execute(data);
+  const message = ' em binário é:';
 
   return response.render('result', {
-    result,
+    numberToConvert,
+    convertedNumber,
+    message,
+  });
+});
+
+routes.get('/convertBinToDec', (request, response) => {
+  const { binaryNumber } = request.query;
+  const data = { binaryNumber } as { binaryNumber: string };
+  const conversor = new ConvertBinToDecService();
+  const numberToConvert = data.binaryNumber;
+  const convertedNumber = conversor.execute(data);
+  const message = ' em decimal é:';
+
+  return response.render('result', {
+    numberToConvert,
+    convertedNumber,
+    message,
   });
 });
 
