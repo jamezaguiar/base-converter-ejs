@@ -31,7 +31,7 @@ header {
   height: 50px;
 
   color: #172121;
-  background-color: #FFC759;
+  background-color: #ffc759;
 
   font-size: 18px;
   font-weight: 200;
@@ -54,4 +54,75 @@ header {
 
   height: 80vh;
   width: 100vw;
+}
+
+.formContainer {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  width: 400px;
+  height: 350px;
+
+  padding: 16px;
+
+  background-color: #607196;
+  border-radius: 8px;
+}
+
+.formBox h1 {
+  margin-bottom: 32px;
+  color: #e8e9ed;
+}
+
+.formBox form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.formBox form input {
+  height: 48px;
+  width: 280px;
+
+  font-size: 18px;
+
+  margin-right: 8px;
+  margin-bottom: 8px;
+
+  padding: 16px;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.formBox form button {
+  height: 48px;
+  width: 80px;
+
+  font-size: 16px;
+  color: #172121;
+
+  background-color: #e8e9ed;
+
+  border: 0;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: background-color 0.5s;
+}
+
+.formBox form button:hover {
+  background-color: #cacacc;
 }
