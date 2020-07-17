@@ -152,3 +152,16 @@ header {
 .resultBox h1 {
   color: #607196;
 }
+
+.errorsList {
+  margin-top: 32px;
+  list-style-type: disc;
+}
+
+.errorsList p {
+  margin-bottom: 8px;
+}
+
+.errorItem {
+  font-weight: 200;
+}
