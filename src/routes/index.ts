@@ -40,14 +40,17 @@ routes.get('/convertBinToDec', (request, response) => {
   const data = { binaryNumber } as { binaryNumber: string };
   const conversor = new ConvertBinToDecService();
   const numberToConvert = data.binaryNumber;
-  const convertedNumber = conversor.execute(data);
   const message = ' em decimal é:';
-
-  return response.render('result', {
-    numberToConvert,
-    convertedNumber,
-    message,
-  });
+  try {
+    const convertedNumber = conversor.execute(data);
+    return response.render('result', {
+      numberToConvert,
+      convertedNumber,
+      message,
+    });
+  } catch (error) {
+    return response.render('error');
+  }
 });
 
 export default routes;
