@@ -67,4 +67,4 @@ No caso de uma entrada de dados incorreta da parte do usuário, uma página de e
 
 # Acesse
 
-<a href="https://damp-castle-66089.herokuapp.com/" target="blank">Base Converter</a>
+<a href="https://damp-castle-66089.herokuapp.com/" target="_blank">Base Converter</a>
